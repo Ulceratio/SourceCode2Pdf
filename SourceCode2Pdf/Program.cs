@@ -3,9 +3,6 @@ using SourceCode2Pdf.SourceCodeToHtml;
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Microsoft.Scripting.Hosting;
-using IronPython.Hosting;
-
 
 namespace SourceCode2Pdf
 {
