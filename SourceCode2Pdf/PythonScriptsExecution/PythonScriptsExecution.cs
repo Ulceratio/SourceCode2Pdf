@@ -6,7 +6,7 @@ using Microsoft.Scripting.Hosting;
 
 namespace SourceCode2Pdf.PythonScriptsExecution
 {
-    public class PythonScriptsExecution <T>
+    public class PythonScriptsExecution<T>
     {
         public T Execute(string scriptFile)
         {
