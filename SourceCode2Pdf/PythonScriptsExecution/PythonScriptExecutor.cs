@@ -6,6 +6,6 @@ namespace SourceCode2Pdf.PythonScriptsExecution
 {
     interface PythonScriptExecutor<T>
     {
-        T Execute(string scriptFile);
+        T Execute(string script);
     }
 }
