@@ -13,7 +13,7 @@ namespace SourceCode2Pdf.PythonScriptsExecution
             ScriptEngine pythonScript = Python.CreateEngine();
             ScriptScope scope = pythonScript.CreateScope();
             pythonScript.ExecuteFile(script);
-            return scope.GetVariable(resultingVariable);// изменить имя переменной в зависимости от ее имени в скрипте
+            return scope.GetVariable(resultingVariable);
         }
 
     }
