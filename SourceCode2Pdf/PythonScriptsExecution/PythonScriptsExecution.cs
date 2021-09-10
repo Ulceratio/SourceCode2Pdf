@@ -8,12 +8,12 @@ namespace SourceCode2Pdf.PythonScriptsExecution
 {
     public class PythonScriptsExecution<T> : PythonScriptExecutor<T>
     {
-        public T Execute(string script)
+        public T Execute(string script, string resultingVariable)
         {
             ScriptEngine pythonScript = Python.CreateEngine();
             ScriptScope scope = pythonScript.CreateScope();
             pythonScript.ExecuteFile(script);
-            return scope.GetVariable("result");// изменить имя переменной в зависимости от ее имени в скрипте
+            return scope.GetVariable(resultingVariable);// изменить имя переменной в зависимости от ее имени в скрипте
         }
 
     }
