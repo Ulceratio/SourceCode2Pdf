@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SourceCode2Pdf.PythonScriptsExecution
 {
-    interface PythonScriptExecutor<T>
+    public interface IPythonScriptExecutor<T>
     {
-        T Execute(string script, string resultingVariable);
+        T Execute(string script, string resultVariableName);
     }
 }

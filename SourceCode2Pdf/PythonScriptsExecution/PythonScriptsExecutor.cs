@@ -6,14 +6,14 @@ using Microsoft.Scripting.Hosting;
 
 namespace SourceCode2Pdf.PythonScriptsExecution
 {
-    public class PythonScriptsExecution<T> : PythonScriptExecutor<T>
+    public class PythonScriptExecutor<T> : IPythonScriptExecutor<T>
     {
-        public T Execute(string script, string resultingVariable)
+        public T Execute(string script, string resultVariableName)
         {
             ScriptEngine pythonScript = Python.CreateEngine();
             ScriptScope scope = pythonScript.CreateScope();
             pythonScript.ExecuteFile(script);
-            return scope.GetVariable(resultingVariable);
+            return scope.GetVariable(resultVariableName);
         }
 
     }
