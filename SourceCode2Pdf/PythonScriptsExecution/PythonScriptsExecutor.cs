@@ -10,11 +10,14 @@ namespace SourceCode2Pdf.PythonScriptsExecution
     {
         public T Execute(string script, string resultVariableName)
         {
+            T result = default(T);
+
             ScriptEngine pythonScript = Python.CreateEngine();
             ScriptScope scope = pythonScript.CreateScope();
-            pythonScript.ExecuteFile(script);
-            return scope.GetVariable(resultVariableName);
-        }
+            pythonScript.ExecuteFile(script, scope);
+            result = scope.GetVariable(resultVariableName);
+            return result;
 
+        }
     }
 }
