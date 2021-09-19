@@ -16,4 +16,8 @@
     <PackageReference Include="RestSharp" Version="106.12.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="HighLightPythonScript\" />
+  </ItemGroup>
+
 </Project>
